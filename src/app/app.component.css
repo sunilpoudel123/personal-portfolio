@@ -1,6 +1,13 @@
 .container {
-  margin: 20px;
-  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  line-height: 1.6;
 }
 
 h1 {
@@ -34,22 +41,86 @@ h2 {
 }
 
 .header, .footer {
-  font-family: Arial, sans-serif;
-  background-color: lightgray;
-  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #7ac7ef; /* Soft light blue */
+  padding: 15px 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #fff;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.contact-links {
+  text-align: right;
+  font-size: 14px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #041655;
+  font-weight: bold;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Consistent spacing between menu items */
+  margin-top: 10px;
 }
 
 .menu a {
-  margin: 0 10px;
   text-decoration: none;
-  color: #333;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .menu a:hover {
-  color: #1e90ff;
+  color: #1e90ff; /* Brighter blue for hover effect */
+  background-color: #fff; /* White background for contrast */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f8ff; /* Light blue background for a professional theme */
+  text-align: center;
+  border-top: 2px solid #d3d3d3; /* Subtle border to separate the footer */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
 }
 
 .footer p {
-  margin: 0;
+  margin: 5px 0;
+  color: #333; /* Darker text for better readability */
+}
+
+.footer a {
+  color: #1e90ff; /* Bright blue for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer strong {
+  color: #333; /* Highlight your name for emphasis */
 }
