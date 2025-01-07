@@ -1,0 +1,41 @@
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f0f8ff; /* Light blue background for a professional theme */
+  border-top: 2px solid #d3d3d3; /* Subtle border to separate the footer */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-top: auto; /* Automatically moves footer to the bottom if there is space */
+}
+
+.footer p {
+  margin: 5px 0;
+  color: #333; /* Darker text for better readability */
+}
+
+.footer a {
+  color: #1e90ff; /* Bright blue for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer strong {
+  color: #333; /* Highlight your name for emphasis */
+}
+.main-content {
+  flex: 1; /* Takes up available space, pushing the footer to the bottom when content is short */
+}
+.content {
+  flex: 1 0 auto; /* Grow to fill available space */
+}

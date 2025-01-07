@@ -1,0 +1,43 @@
+.home-container {
+  z-index: 1; /* Raises the text above the canvas */
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.home-container h1 {
+  color: #3e50e4;
+  font-size: 36px;
+}
+
+.home-container p {
+  color: #555;
+  font-size: 18px;
+}
+
+/* Container that holds the globe */
+#globeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  background: radial-gradient(circle, #000, #001f3f); /* Add a subtle gradient for a space effect */
+  overflow: hidden;
+  position: relative; /* Ensure proper stacking context for children */
+}
+
+/* Canvas for the globe */
+#globeCanvas {
+  z-index: -1; /* Ensures it's behind other content */
+  display: block;
+  position: relative; /* Fills the container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stretches to the container width */
+  height: 100%; /* Stretches to the container height */
+  background-color: transparent;
+  border: none;
+}
+
