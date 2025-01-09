@@ -1,43 +1,198 @@
-.home-container {
-  z-index: 1; /* Raises the text above the canvas */
-  text-align: center;
-  margin-top: 50px;
-  font-family: Arial, sans-serif;
-}
-
-.home-container h1 {
-  color: #3e50e4;
-  font-size: 36px;
-}
-
-.home-container p {
-  color: #555;
-  font-size: 18px;
-}
-
-/* Container that holds the globe */
-#globeContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* General Styles */
+body, html {
   margin: 0;
-  width: 100%; /* Full width of the parent */
-  height: 100%; /* Full height of the parent */
-  background: radial-gradient(circle, #000, #001f3f); /* Add a subtle gradient for a space effect */
+  padding: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  position: relative; /* Ensure proper stacking context for children */
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d1e; /* Dark blue background */
+  color: #e0f7ff; /* Light cyan text */
 }
 
-/* Canvas for the globe */
+/* Home Container */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Intro Section */
+.intro .name {
+  font-size: 3rem;
+  color: #29d1ff; /* Glowing cyan */
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #29d1ff, 0 0 40px #29d1ff;
+}
+
+.intro .name span {
+  color: #ffe400; /* Neon yellow */
+  text-shadow: 0 0 20px #ffe400, 0 0 40px #ffe400;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #cce7ff;
+  line-height: 1.5;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background: linear-gradient(90deg, #29d1ff, #005eff);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 20px #29d1ff, 0 0 40px #29d1ff;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #29d1ff, 0 0 60px #29d1ff;
+}
+
+.btn-secondary {
+  background: linear-gradient(90deg, #ffe400, #ff6a00);
+  box-shadow: 0 0 20px #ffe400, 0 0 40px #ff6a00;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #ffe400, 0 0 60px #ff6a00;
+}
+
+/* Canvas Style */
 #globeCanvas {
-  z-index: -1; /* Ensures it's behind other content */
-  display: block;
-  position: relative; /* Fills the container */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Stretches to the container width */
-  height: 100%; /* Stretches to the container height */
-  background-color: transparent;
-  border: none;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place it behind all content */
+  background: radial-gradient(circle, #0d0d1e 0%, #09091c 100%); /* Dark radial gradient */
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+  animation: cyberpunkGlobeGlow 6s infinite alternate ease-in-out;
+  overflow: hidden;
 }
 
+/* Animation for glowing effect */
+@keyframes cyberpunkGlobeGlow {
+  0% {
+    filter: blur(1px) brightness(0.8); /* Reduced blur to 5px */
+  }
+  50% {
+    filter: blur(1px) brightness(1); /* Maintain blur, increase brightness */
+  }
+  100% {
+    filter: blur(1px) brightness(0.8);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #globeCanvas {
+    filter: blur(8px); /* Slightly reduce blur for smaller screens */
+  }
+}
+
+/* !*introduction section*!*/
+/* .hero-section {*/
+/*   text-align: center;*/
+/*   padding: 100px 20px;*/
+/*   background: transparent;*/
+/*   color: #e0f7ff; !* Light cyan for text *!*/
+/*   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8), 0 0 100px #000;*/
+/*   position: relative;*/
+/*   overflow: hidden;*/
+/* }*/
+
+/*.hero-section::after {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background: radial-gradient(circle, rgba(41, 209, 255, 0.2), transparent);*/
+/*  mix-blend-mode: screen;*/
+/*  z-index: -1;*/
+/*  animation: subtleGlow 10s linear infinite;*/
+/*}*/
+
+.name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffe400; /* Neon yellow */
+  text-shadow: 0 0 20px #ffe400, 0 0 40px #ffe400, 0 0 60px rgba(255, 228, 0, 0.5);
+}
+
+.name span {
+  color: #29d1ff; /* Glowing cyan */
+  text-shadow: 0 0 20px #29d1ff, 0 0 40px #29d1ff, 0 0 60px rgba(41, 209, 255, 0.5);
+  animation: nameGlow 3s infinite alternate;
+}
+
+.description {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: rgba(204, 231, 255, 0.7); /* Soft blue with 70% opacity */
+  margin-top: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent; /* Semi-transparent black background */
+  padding: 20px;
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(204, 231, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 40px rgba(204, 231, 255, 0.3);
+}
+
+@keyframes nameGlow {
+  0% {
+    text-shadow: 0 0 10px #29d1ff, 0 0 20px #29d1ff, 0 0 40px rgba(41, 209, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px #29d1ff, 0 0 40px #29d1ff, 0 0 60px rgba(41, 209, 255, 0.7);
+  }
+}
+
+@keyframes subtleGlow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+}
