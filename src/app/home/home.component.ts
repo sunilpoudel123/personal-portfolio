@@ -40,7 +40,7 @@ export class HomeComponent implements AfterViewInit {
 
       let globeCenterX: number = canvas.width / 2;
       let globeCenterY: number = canvas.height / 2;
-      const radius = Math.min(canvas.width, canvas.height); // Adjust globe size relative to screen size
+      const radius = Math.max(canvas.width, canvas.height)*2.4; // Adjust globe size relative to screen size
 
       const pixels: any[] = [];
       let rotation = 0;

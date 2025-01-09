@@ -1,131 +1,152 @@
+/* Container for all sections */
 .container {
   max-width: 1200px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 30px;
   font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #333;
-  line-height: 1.6;
+  background: linear-gradient(145deg, #0d1b2a, #1a2b3c); /* Dark gradient background */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Intense shadow for depth */
+  color: #d3d3d3; /* Light text color */
+  line-height: 1.8;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 10%, transparent 10%) center;
+  animation: glow 3s infinite ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.container h1,
+.container h2,
+.container h3 {
+  position: relative;
+  z-index: 1; /* Keeps text above the glowing background */
 }
 
 h1 {
-  color: #2d89ef;
+  color: #00ff9d; /* Neon cyan for main title */
   font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /*text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d, 0 0 30px #00ff9d; !* Glowing effect *!*/
 }
 
-p {
-  font-size: 16px;
-  margin: 5px 0;
+h2, h3 {
+  color: #ffeb3b; /* Neon yellow for subheadings */
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: bold;
+  /*text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffeb3b; !* Glowing effect *!*/
+  margin-top: 20px;
 }
 
 ul {
-  list-style-type: disc;
   margin-left: 20px;
+  color: #b3b3b3; /* Light gray for list items */
+  list-style-type: none;
 }
 
+ul li {
+  font-size: 16px;
+  margin: 8px 0;
+  line-height: 1.5;
+  padding-left: 10px;
+  border-left: 2px solid #00ff9d; /* Neon cyan left border */
+  position: relative;
+}
+
+ul li strong {
+  color: #fff; /* White text for strong labels */
+  font-weight: bold;
+}
+
+ul li::before {
+  content: '•'; /* Custom bullet for list items */
+  position: absolute;
+  left: -8px;
+  color: #ffeb3b; /* Neon yellow for bullets */
+  font-size: 18px;
+}
+
+p {
+  color: #b3b3b3;
+  font-size: 16px;
+  margin: 15px 0;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Link Styles */
 a {
-  color: #1e90ff;
+  color: #ffeb3b; /* Neon yellow for links */
   text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 a:hover {
+  color: #00ff9d; /* Neon cyan hover effect */
   text-decoration: underline;
+  text-shadow: 0 0 10px #ffeb3b; /* Glowing text effect */
 }
 
-h2 {
-  color: #333;
+/* Keyframes for glowing background animation */
+@keyframes glow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+}
+
+/* Style for sections like Summary, Experience, Education, and Projects */
+h3 {
+  color: #fff; /* White color for job titles */
+  font-size: 22px;
   margin-top: 20px;
-  font-size: 24px;
+  text-transform: uppercase;
 }
 
-.header, .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Arial', sans-serif;
-  background-color: #7ac7ef; /* Soft light blue */
-  padding: 15px 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  color: #fff;
+ul li {
+  font-size: 16px;
+  color: #b3b3b3; /* Light gray for list items */
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-left: 2px solid #ffeb3b; /* Neon yellow border for emphasis */
 }
 
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+ul li:last-child {
+  margin-bottom: 20px;
 }
 
-.contact-links {
-  text-align: right;
-  font-size: 14px;
-}
-
-.contact-links a {
-  text-decoration: none;
-  color: #041655;
-  font-weight: bold;
-}
-
-.contact-links a:hover {
-  text-decoration: underline;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 15px; /* Consistent spacing between menu items */
-  margin-top: 10px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  border-right: 1px solid rgba(255, 255, 255, 0.5); /* Fine line between items */
-}
-
-.menu a:last-child {
-  border-right: none; /* Remove the line from the last item */
-}
-
-.menu a:hover {
-  color: #1e90ff; /* Brighter blue for hover effect */
-  background-color: #fff; /* White background for contrast */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
-}
-
-.footer {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f0f8ff; /* Light blue background for a professional theme */
-  text-align: center;
-  border-top: 2px solid #d3d3d3; /* Subtle border to separate the footer */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-
-.footer p {
+ul li p {
   margin: 5px 0;
-  color: #333; /* Darker text for better readability */
+  font-size: 14px;
+  color: #999;
 }
 
-.footer a {
-  color: #1e90ff; /* Bright blue for links */
-  text-decoration: none;
-  font-weight: bold;
+/* Experience Section */
+h2 + div {
+  margin-top: 30px;
 }
 
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer strong {
-  color: #333; /* Highlight your name for emphasis */
+/* Projects Section */
+h2 + div + div {
+  margin-top: 30px;
 }
