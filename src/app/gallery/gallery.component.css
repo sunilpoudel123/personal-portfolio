@@ -1,0 +1,8 @@
+.thumbnail {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid #ddd; /* Optional: For a thumbnail-like border */
+  border-radius: 5px;    /* Optional: Rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+}

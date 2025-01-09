@@ -1,0 +1,152 @@
+/* Container for all sections */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(145deg, #0d1b2a, #1a2b3c); /* Dark gradient background */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Intense shadow for depth */
+  color: #d3d3d3; /* Light text color */
+  line-height: 1.8;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 10%, transparent 10%) center;
+  animation: glow 3s infinite ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.container h1,
+.container h2,
+.container h3 {
+  position: relative;
+  z-index: 1; /* Keeps text above the glowing background */
+}
+
+h1 {
+  color: #00ff9d; /* Neon cyan for main title */
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  /*text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d, 0 0 30px #00ff9d; !* Glowing effect *!*/
+}
+
+h2, h3 {
+  color: #ffeb3b; /* Neon yellow for subheadings */
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: bold;
+  /*text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffeb3b; !* Glowing effect *!*/
+  margin-top: 20px;
+}
+
+ul {
+  margin-left: 20px;
+  color: #b3b3b3; /* Light gray for list items */
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 16px;
+  margin: 8px 0;
+  line-height: 1.5;
+  padding-left: 10px;
+  border-left: 2px solid #00ff9d; /* Neon cyan left border */
+  position: relative;
+}
+
+ul li strong {
+  color: #fff; /* White text for strong labels */
+  font-weight: bold;
+}
+
+ul li::before {
+  content: '•'; /* Custom bullet for list items */
+  position: absolute;
+  left: -8px;
+  color: #ffeb3b; /* Neon yellow for bullets */
+  font-size: 18px;
+}
+
+p {
+  color: #b3b3b3;
+  font-size: 16px;
+  margin: 15px 0;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Link Styles */
+a {
+  color: #ffeb3b; /* Neon yellow for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #00ff9d; /* Neon cyan hover effect */
+  text-decoration: underline;
+  text-shadow: 0 0 10px #ffeb3b; /* Glowing text effect */
+}
+
+/* Keyframes for glowing background animation */
+@keyframes glow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+}
+
+/* Style for sections like Summary, Experience, Education, and Projects */
+h3 {
+  color: #fff; /* White color for job titles */
+  font-size: 22px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+ul li {
+  font-size: 16px;
+  color: #b3b3b3; /* Light gray for list items */
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-left: 2px solid #ffeb3b; /* Neon yellow border for emphasis */
+}
+
+ul li:last-child {
+  margin-bottom: 20px;
+}
+
+ul li p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Experience Section */
+h2 + div {
+  margin-top: 30px;
+}
+
+/* Projects Section */
+h2 + div + div {
+  margin-top: 30px;
+}

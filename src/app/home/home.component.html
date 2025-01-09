@@ -1,0 +1,29 @@
+<div class="home-container">
+  <section class="intro">
+    <h2 class="name">
+      I'm <span>Sunil Poudel</span>
+    </h2>
+    <h2 class="description">
+      Full Stack Java Developer with 6+ years of experience in crafting scalable and enterprise-grade applications.
+    </h2>
+    <div class="buttons">
+      <button
+        routerLink="/profile"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="btn"
+        (click)="navigateToPage('/profile')">
+        PROFILE
+      </button>
+      <button
+        routerLink="/projects"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="btn btn-secondary"
+        (click)="navigateToPage('/projects')">
+        PROJECTS
+      </button>
+    </div>
+  </section>
+</div>
+<canvas id="globeCanvas"></canvas>

@@ -1,0 +1,46 @@
+.footer {
+  background: linear-gradient(135deg, #0d0d1e, #1a1a3c);
+  padding: 20px 0;
+  text-align: center;
+  color: #e0f7ff; /* Light cyan */
+  font-size: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 50px #000;
+  border-top: 2px solid rgba(41, 209, 255, 0.2);
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #cce7ff; /* Soft blue */
+}
+
+.footer a {
+  color: #29d1ff; /* Glowing cyan */
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffe400; /* Neon yellow */
+  text-shadow: 0 0 10px #ffe400, 0 0 20px #ffe400;
+}
+
+.footer strong {
+  color: #ffe400;
+  text-shadow: 0 0 10px #ffe400, 0 0 20px #ffe400;
+}
+
+/* Icon Styling (if used) */
+.footer i {
+  margin-right: 5px;
+  font-size: 1.2rem;
+  color: #29d1ff;
+  transition: all 0.3s ease;
+}
+
+.footer i:hover {
+  color: #ffe400;
+  text-shadow: 0 0 10px #ffe400, 0 0 20px #ffe400;
+}

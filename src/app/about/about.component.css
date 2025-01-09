@@ -1,0 +1,140 @@
+.home-container {
+  color: #e0f7ff; /* Light cyan */
+  background: #0d0d1e; /* Dark cyberpunk background */
+  padding: 50px 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 100px #000;
+  overflow: hidden;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.greeting {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffe400; /* Neon yellow */
+  text-shadow: 0 0 15px #ffe400, 0 0 25px #ffe400;
+  animation: textGlow 2s linear infinite alternate;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #29d1ff; /* Glowing cyan */
+  text-shadow: 0 0 20px #29d1ff, 0 0 40px #29d1ff, 0 0 60px rgba(41, 209, 255, 0.5);
+  margin-top: 10px;
+  animation: textGlow 3s linear infinite alternate;
+}
+
+.headline {
+  font-size: 1.4rem;
+  color: #cce7ff; /* Soft blue */
+  margin-top: 15px;
+  text-shadow: 0 0 10px rgba(204, 231, 255, 0.3);
+}
+
+/* About Section */
+.about {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.about h3 {
+  font-size: 2.5rem;
+  color: #ffe400; /* Neon yellow */
+  text-shadow: 0 0 15px #ffe400, 0 0 25px #ffe400;
+  margin-bottom: 20px;
+}
+
+.about p, .achievements {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #cce7ff; /* Soft blue */
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  margin: 10px 0;
+}
+
+.about strong {
+  color: #ffe400; /* Neon yellow */
+}
+
+/* Skills Section */
+.skills {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.skills h3 {
+  font-size: 2.5rem;
+  color: #ffe400; /* Neon yellow */
+  text-shadow: 0 0 15px #ffe400, 0 0 25px #ffe400;
+  margin-bottom: 20px;
+}
+
+.skills p {
+  font-size: 1.2rem;
+  color: #cce7ff;
+  line-height: 1.8;
+}
+
+.skills strong {
+  color: #29d1ff; /* Glowing cyan */
+}
+
+/* Animations for Glowing Effects */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px #29d1ff, 0 0 20px #29d1ff, 0 0 40px rgba(41, 209, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px #29d1ff, 0 0 40px #29d1ff, 0 0 60px rgba(41, 209, 255, 0.7);
+  }
+}
+
+@keyframes glowEffect {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .greeting {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .headline {
+    font-size: 1.2rem;
+  }
+
+  .about p, .skills p {
+    font-size: 1rem;
+  }
+}

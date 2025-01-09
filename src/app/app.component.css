@@ -87,6 +87,11 @@ h2 {
   padding: 8px 12px;
   border-radius: 5px;
   transition: all 0.3s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.5); /* Fine line between items */
+}
+
+.menu a:last-child {
+  border-right: none; /* Remove the line from the last item */
 }
 
 .menu a:hover {

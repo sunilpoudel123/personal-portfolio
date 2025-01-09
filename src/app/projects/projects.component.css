@@ -1,0 +1,117 @@
+.projects-page {
+  background: linear-gradient(135deg, #0a0a0a, #121212); // Dark gradient background
+color: #29d1ff; // Default glowing cyan text
+font-family: 'Orbitron', sans-serif;
+  padding: 100px;
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    color: #ffe400; // Neon yellow
+  text-shadow: 0 0 10px #ffe400, 0 0 20px #ffe400; // Yellow glow
+  margin-bottom: 40px;
+  }
+
+  .project-card {
+    background: #111111; // Dark card background
+  border: 1px solid #29d1ff; // Cyan border
+  margin: 20px 0;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(41, 209, 255, 0.4); // Cyan glow
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(41, 209, 255, 0.7); // Stronger glow on hover
+    }
+
+    .project-title {
+      font-size: 1.8rem;
+      color: #ffe400; // Neon yellow for titles
+    text-shadow: 0 0 10px #ffe400, 0 0 20px #ffe400; // Yellow glow
+    margin-bottom: 10px;
+    }
+
+    .sub-title {
+      font-size: 1.5rem;
+      color: #ffe400; // Neon yellow for subtitles
+    text-shadow: 0 0 8px #ffe400; // Yellow glow
+    margin-bottom: 10px;
+    }
+
+    .project-subtitle,
+    .project-duration,
+    .project-locations,
+    .school-name,
+    .project-year {
+      font-size: 1rem;
+      color: #29d1ff; // Cyan text
+    text-shadow: 0 0 5px #29d1ff; // Subtle cyan glow
+    margin-bottom: 10px;
+    }
+
+    .school-name {
+      font-size: 1rem;
+      font-style: italic;
+      color: #ffe400; // Neon yellow for school name
+    text-shadow: 0 0 5px #ffe400; // Yellow glow
+    }
+
+    .project-year {
+      font-size: 1rem;
+      color: #29d1ff; // Cyan text
+    text-shadow: 0 0 5px #29d1ff; // Cyan glow
+    }
+
+    .project-tech {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+
+      span {
+        background: rgba(41, 209, 255, 0.1); // Cyan highlight
+      padding: 3px 8px;
+        margin: 2px;
+        border-radius: 5px;
+        color: #29d1ff;
+        text-shadow: 0 0 5px #29d1ff; // Cyan glow
+      }
+    }
+
+    .project-description {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: #29d1ff; // Cyan text
+    text-shadow: 0 0 5px #29d1ff;
+    }
+
+    .project-details {
+      li {
+        margin: 5px 0;
+        color: #ffe400; // Neon yellow for bullet points
+      text-shadow: 0 0 5px #ffe400;
+        font-size: 1rem;
+      }
+    }
+
+    .action-btn {
+      background: #29d1ff; // Cyan button
+    color: #111111; // Contrast text
+    border: 1px solid #29d1ff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        background: #ffe400; // Neon yellow on hover
+      color: #000; // Dark text
+      box-shadow: 0 0 15px #ffe400, 0 0 20px #ffe400; // Yellow glow
+      }
+    }
+  }
+}
